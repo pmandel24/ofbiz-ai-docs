@@ -25,7 +25,7 @@ jobs:
       - name: Install Antora CLI & Extensions
         run: |
           npm i -g @antora/cli @antora/site-generator-default
-          npm i -g git+https://github.com/Mogztter/antora-kroki-extension.git
+          npm i -g https://github.com/Mogztter/antora-kroki-extension/archive/refs/heads/master.zip
 
       - name: Generate Site
         run: antora antora-playbook.yml
