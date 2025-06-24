@@ -1,5 +1,6 @@
 site:
   title: "Apache OFBiz – Missing Manual"
+  url: https://pmandel24.github.io/ofbiz-ai-docs
   start_page: core-concepts::0-purpose-of-this-guide.adoc
 content:
   sources:
