@@ -1,0 +1,48 @@
+= 2 Directory Structure
+:page-role: guide-part
+:page-part: part-ii
+:description: Navigating the OFBiz source tree.
+
+Understanding the OFBiz directory layout is key to finding code, customizing applications, and managing extensions.
+
+== Top-Level Directories
+
+.Key Directories in OFBiz Root
+[cols="1,3"]
+|===
+| Directory | Purpose
+
+| `applications/`
+| Core OFBiz applications (Order, Catalog, Accounting, etc.). *CAUTION: Do not modify code here directly.*
+
+| `framework/`
+| The core framework libraries (Entity Engine, Service Engine, etc.).
+
+| `plugins/`
+| The designated home for all custom extensions and third-party plug-ins. Your custom code lives here.
+
+| `runtime/`
+| Contains logs, temporary files, and data for the running instance. Not version-controlled.
+
+| `themes/`
+| Global look-and-feel themes that can be applied to the entire application suite.
+|===
+
+WHY IT MATTERS:: The strict separation between `applications/` (core) and `plugins/` (custom) is the foundation of OFBiz's upgrade path. By keeping your changes isolated in a plug-in, you can update the core framework without complex code merges.
+
+== Inside a Plug-in
+A well-formed plug-in mirrors the main OFBiz structure, allowing it to ship its own entities, services, and web applications.
+
+.Example Plug-in Layout (`plugins/my-plugin`)
+[source,text]
+----
+my-plugin/
+├── build.gradle        # Plug-in specific build logic
+├── data/               # Seed and demo data (EntityTypeData.xml)
+├── entitydef/          # Data model definitions (entitymodel.xml)
+├── script/             # Groovy/Minilang service implementations
+├── servicedef/         # Service definitions (services.xml)
+└── webapp/             # Web application, with its own WEB-INF/
+----
+
+[source: Confluence%PLUGIN-GUIDE, docs.ofbiz.apache.org%18.12_DevGuide.pdf]

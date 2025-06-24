@@ -1,0 +1,53 @@
+= 1 The OFBiz Shell & Common Tasks
+:page-role: guide-part
+:page-part: part-ii
+:description: A tour of the Gradle-based command-line interface.
+
+OFBiz provides a unified Gradle wrapper (`./gradlew`) for all essential developer tasks, from loading data to running tests. Mastering these commands is the fastest way to become productive.
+
+== Core Commands
+
+.Common Gradle Tasks
+[cols="1,3"]
+|===
+| Command | Description
+
+| `./gradlew ofbiz`
+| The main task for running OFBiz. Appends `--start`, `--shutdown`, `--status`.
+
+| `./gradlew loadDefault`
+| Loads the default seed and demo data for all applications. Destructive; resets databases.
+
+| `./gradlew cleanAll loadAll`
+| A common chain to wipe all data and reload it. Useful for dev environments.
+
+| `./gradlew testIntegration`
+| Runs all integration tests across the framework and applications.
+
+| `./gradlew createPlugin`
+| Scaffolds a new plug-in with a standard directory structure.
+|===
+
+WHY IT MATTERS:: A consistent CLI prevents "works on my machine" problems. The Gradle wrapper ensures every developer uses the same build logic and dependencies, which is critical for team-based projects.
+
+== Interactive Shell
+For more advanced debugging or system inspection, you can launch an interactive Groovy shell with full access to the running OFBiz instance.
+
+[source,bash]
+----
+./gradlew ofbiz --shell
+----
+
+Once inside, you have access to the `delegator` and `dispatcher` objects.
+
+.Example: Querying an entity from the shell
+[source,groovy]
+----
+// Find the 'admin' user
+adminUser = delegator.findOne("UserLogin", [userLoginId: "admin"], false)
+println "Admin email: " + adminUser.email
+----
+
+CAUTION: The shell has full admin rights. Be careful running commands that modify data.
+
+[source: Confluence%OFBIZ-CLI-GUIDE]
