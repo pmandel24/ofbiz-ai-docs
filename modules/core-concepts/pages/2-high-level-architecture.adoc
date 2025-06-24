@@ -1,0 +1,53 @@
+= 2 High-Level Architecture
+:page-role: guide-part
+:page-part: part-i
+:description: Entity Engine, Service Engine, Widget Layer, Plug-in Model
+
+[plantuml, architecture, svg]
+----
+package "Apache OFBiz" {
+  [Entity
+  Engine] as EE
+  [Service
+  Engine] as SE
+  [Widget Layer] as WL
+  [Applications] as APP
+  [Plug-ins] as PL
+}
+EE --> SE : delegator
+SE --> WL : service calls
+WL --> APP : screens
+PL ..> EE : extends model
+PL ..> SE : registers services
+PL ..> WL : custom widgets
+----
+
+NOTE: PlantUML diagrams render automatically in Antora when the `antora-site.yml` includes the `antora-kroki` extension.
+
+== Entity Engine
+A thin ORM and transaction manager. Tables are defined in XML (`entitymodel.xml`), then accessed via the `Delegator` API. VERIFY: starting version of Delegator.
+
+* **Why it matters**: Enables database-agnostic portability; model changes auto-generate DDL during `gradlew ofbiz --load-data`.
+* **Gotcha**: No lazy-loading; fetching large relations can explode memory. ([source: JIRA OFBIZ-11924])
+
+== Service Engine
+The SOA heart. Services declared in `services.xml` may be Java, Groovy, or Minilang. Synchronous or asynchronous via the `JobManager`.
+
+WHY IT MATTERS:: Decouples business logic from UI and persistence; enables REST or SOAP wrappers.
+
+== Widget Layer
+Freemarker + XML DSL that renders Screens, Forms, and Menus. While dated, it enforces consistency and permissions via the controller.
+
+TIP: Use the *Theme* mechanism to swap look-and-feel without touching business widgets. ([source: docs 22.01 Front-end Guide])
+
+== Plug-in Model
+OFBiz core is frozen; extensions live in `plugins/`. A plug-in can ship entities, services, webapps, tests.
+
+.Command to generate a scaffold
+----
+./gradlew createPlugin --pluginId=myshop --pluginResourceName="My Shop"
+----
+
+CAUTION: Keep custom code out of `applications/` to stay upgrade-safe.
+
+[source: Confluence%FRAMEWORK-OVERV]

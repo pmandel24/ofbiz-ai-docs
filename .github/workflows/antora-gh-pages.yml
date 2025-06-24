@@ -1,0 +1,37 @@
+name: Build & Deploy Antora Site
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "modules/**"
+      - "antora-playbook.yml"
+      - ".github/workflows/antora-gh-pages.yml"
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Antora CLI & Extensions
+        run: |
+          npm i -g @antora/cli @antora/site-generator-default @antora/kroki-extension
+
+      - name: Generate Site
+        run: antora antora-playbook.yml
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/site
+          publish_branch: gh-pages
+          keep_files: false

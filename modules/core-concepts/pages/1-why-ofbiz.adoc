@@ -1,0 +1,29 @@
+= 1 Why OFBiz? Origins, Strengths, Landmines
+:page-role: guide-part
+:page-part: part-i
+:description: Historical context, value proposition, and caveats.
+
+Apache OFBiz ("Open For Business") was born in 2001 to provide an open-source ERP/commerce foundation when commercial suites were monolithic and proprietary. It entered the Apache Incubator in 2006 and graduated as a Top-Level Project in 2008. ([source: Confluence%PROJECT-HISTORY])
+
+== Origins
+* *E‐commerce pain-points.* Early adopters needed catalogue, order management, and accounting in one stack.
+* *Framework first.* The creators architected the _Entity Engine_ and _Service Engine_ before shipping apps, anticipating extensibility. ([source: docs.ofbiz.apache.org%18.12_FrameworkOverview.pdf])
+
+== Strengths
+* **Full-stack**: Database schema, service layer, UI widgets, and business apps ship together—minimising integration glue.
+* **Extensible**: Plug-in architecture lets you override data models or inject new services without forking core. Example: `gradlew createPlugin --pluginId=myext`.
+* **Mature**: Two decades of production use across retail, manufacturing, and government. ([source: dev@ mailing-list, 2022-01 thread "Who uses OFBiz?"]) 
+* **License**: Apache 2.0; permissive for commercial redistribution.
+
+== Landmines
+WARNING: OFBiz power comes with complexity.
+
+.Things to watch
+* **Learning curve.** Multiple domain-specific DSLs (Minilang, Widget XML) can be jarring. VERIFY: Quote failure rates from user@.
+* **Sparse docs.** Official docs often lag the codebase—hence this guide.
+* **Performance tuning.** Default Derby DB and cache settings are safe but not production-grade. TIP: switch to PostgreSQL early.
+* **Upgrade friction.** LTS releases every ~3 years; API breaks happen. Maintain a plug-in isolation layer to ease migrations.
+
+WHY IT MATTERS:: Understanding both _why_ and _why not_ equips you to make architectural buy-in decisions.
+
+[source: Confluence%WHY-OFBIZ]
