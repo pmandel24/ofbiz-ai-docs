@@ -13,6 +13,8 @@ asciidoc:
     url-docs: https://docs.ofbiz.apache.org
     url-jira: https://issues.apache.org/jira/browse
     url-mail: https://lists.apache.org/list.html?dev@ofbiz.apache.org
+  extensions:
+    - asciidoctor-kroki
 output:
   dir: build/site
 ui:

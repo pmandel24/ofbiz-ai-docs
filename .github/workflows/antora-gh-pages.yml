@@ -24,11 +24,11 @@ jobs:
 
       - name: Install Antora CLI & Extensions
         run: |
-          npm i -g @antora/cli @antora/site-generator-default @antora/extension-kroki
+          npm i -g @antora/cli @antora/site-generator-default asciidoctor-kroki
           
 
       - name: Generate Site
-        run: antora --extension=@antora/extension-kroki antora-playbook.yml
+        run: antora antora-playbook.yml
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
