@@ -6,7 +6,7 @@ content:
   sources:
     - url: .
       branches: HEAD
-      start_path: modules
+      start_paths: modules/*
 asciidoc:
   attributes:
     url-confluence: https://cwiki.apache.org/confluence/display/OFBIZ
