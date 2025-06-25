@@ -1,6 +1,6 @@
 name: core-concepts
 title: 'Part I: Core Concepts'
 version: '1.0'
-start_page: 0-purpose-of-this-guide.adoc
+start_page: pages/0-purpose-of-this-guide.adoc
 nav:
   - nav.adoc
