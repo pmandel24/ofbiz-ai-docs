@@ -1,0 +1,107 @@
+{
+  "generated_at": "2025-06-25T15:50:54Z",
+  "git_revision": "c52ce1a58f06fc98ae91d203a68218071e0fef70",
+  "file_count": 20,
+  "files": [
+    {
+      "path": ".github/workflows/antora-gh-pages.yml",
+      "size": 1035,
+      "lines": 48
+    },
+    {
+      "path": ".github/workflows/project-manifest.yml",
+      "size": 821,
+      "lines": 32
+    },
+    {
+      "path": ".windsurf/rules/project-structure.md",
+      "size": 444,
+      "lines": 5
+    },
+    {
+      "path": "LICENSE",
+      "size": 11357,
+      "lines": 201
+    },
+    {
+      "path": "README.md",
+      "size": 73,
+      "lines": 2
+    },
+    {
+      "path": "antora-playbook.yml",
+      "size": 658,
+      "lines": 20
+    },
+    {
+      "path": "modules/common-tasks/antora.yml",
+      "size": 132,
+      "lines": 6
+    },
+    {
+      "path": "modules/common-tasks/modules/ROOT/nav.adoc",
+      "size": 93,
+      "lines": 3
+    },
+    {
+      "path": "modules/common-tasks/modules/ROOT/pages/1-ofbiz-shell.adoc",
+      "size": 1774,
+      "lines": 53
+    },
+    {
+      "path": "modules/common-tasks/modules/ROOT/pages/2-directory-structure.adoc",
+      "size": 1837,
+      "lines": 48
+    },
+    {
+      "path": "modules/core-concepts/antora.yml",
+      "size": 143,
+      "lines": 6
+    },
+    {
+      "path": "modules/core-concepts/modules/ROOT/nav.adoc",
+      "size": 134,
+      "lines": 4
+    },
+    {
+      "path": "modules/core-concepts/modules/ROOT/pages/0-purpose-of-this-guide.adoc",
+      "size": 1542,
+      "lines": 22
+    },
+    {
+      "path": "modules/core-concepts/modules/ROOT/pages/1-why-ofbiz.adoc",
+      "size": 1965,
+      "lines": 29
+    },
+    {
+      "path": "modules/core-concepts/modules/ROOT/pages/2-high-level-architecture.adoc",
+      "size": 1902,
+      "lines": 53
+    },
+    {
+      "path": "modules/meta/antora.yml",
+      "size": 114,
+      "lines": 6
+    },
+    {
+      "path": "modules/meta/modules/ROOT/nav.adoc",
+      "size": 76,
+      "lines": 3
+    },
+    {
+      "path": "modules/meta/modules/ROOT/pages/project-spec.adoc",
+      "size": 2532,
+      "lines": 85
+    },
+    {
+      "path": "modules/meta/modules/ROOT/pages/todo.adoc",
+      "size": 352,
+      "lines": 7
+    },
+    {
+      "path": "scripts/generate_manifest.py",
+      "size": 1715,
+      "lines": 51
+    }
+  ]
+}
