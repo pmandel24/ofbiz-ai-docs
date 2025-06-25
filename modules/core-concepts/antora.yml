@@ -3,4 +3,4 @@ title: 'Part I: Core Concepts'
 version: '1.0'
 start_page: 0-purpose-of-this-guide.adoc
 nav:
-  - nav.adoc
+  - modules/ROOT/nav.adoc

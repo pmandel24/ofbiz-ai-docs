@@ -36,7 +36,7 @@ Authors may define per-file or global attributes in `antora-playbook.yml` via `a
 . Update content.
 . Update `todo.adoc` with any VERIFY gaps.
 . PR review & merge.
-
+`
 == Building the Site
 
 === Prerequisites

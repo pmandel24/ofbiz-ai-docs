@@ -3,4 +3,4 @@ title: 'Part II: Common Tasks'
 version: '1.0'
 start_page: 1-ofbiz-shell.adoc
 nav:
-  - nav.adoc
+  - modules/ROOT/nav.adoc

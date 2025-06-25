@@ -3,4 +3,4 @@ title: 'Project Meta'
 version: '1.0'
 start_page: project-spec.adoc
 nav:
-  - nav.adoc
+  - modules/ROOT/nav.adoc
