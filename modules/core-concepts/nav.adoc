@@ -1,4 +1,4 @@
 * Part I – Core Concepts
-** xref:pages/0-purpose-of-this-guide.adoc[]
-** xref:pages/1-why-ofbiz.adoc[]
-** xref:pages/2-high-level-architecture.adoc[]
+** xref:0-purpose-of-this-guide.adoc[]
+** xref:1-why-ofbiz.adoc[]
+** xref:2-high-level-architecture.adoc[]
