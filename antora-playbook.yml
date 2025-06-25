@@ -1,7 +1,7 @@
 site:
   title: "Apache OFBiz – Missing Manual"
   url: https://pmandel24.github.io/ofbiz-ai-docs
-  start_page: core-concepts::pages/0-purpose-of-this-guide.adoc
+  start_page: core-concepts::0-purpose-of-this-guide.adoc
 content:
   sources:
     - url: .
@@ -13,11 +13,8 @@ asciidoc:
     url-docs: https://docs.ofbiz.apache.org
     url-jira: https://issues.apache.org/jira/browse
     url-mail: https://lists.apache.org/list.html?dev@ofbiz.apache.org
-  extensions:
-    - asciidoctor-kroki
 output:
   dir: build/site
 ui:
   bundle:
-    url: https://gitlab.com/antora/ui-default/-/archive/HEAD/ui-default-HEAD.zip?ref=refs/tags/v0.8.0
-    snapshot: true
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
