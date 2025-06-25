@@ -1,3 +1,3 @@
 * Meta
-** xref:project-spec.adoc[Project Spec]
-** xref:todo.adoc[TODO List]
+** xref:pages/project-spec.adoc[Project Spec]
+** xref:pages/todo.adoc[TODO List]
