@@ -1,3 +1,0 @@
-* Meta
-** xref:project-spec.adoc[Project Spec]
-** xref:todo.adoc[TODO List]

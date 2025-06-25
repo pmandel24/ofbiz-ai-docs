@@ -1,7 +1,0 @@
-= Documentation TODOs
-:page-role: meta
-
-* VERIFY: starting version of Delegator API. (core-concepts/2-high-level-architecture.adoc)
-* VERIFY: user@ mailing-list stats on Minilang learning curve. (core-concepts/1-why-ofbiz.adoc)
-* TODO: Theme mechanism details for 22.01 front-end guide.
-* TODO: Confirm Entity Engine lazy-loading limitation reference.
