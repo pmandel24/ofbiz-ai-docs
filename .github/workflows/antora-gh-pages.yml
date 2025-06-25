@@ -9,6 +9,12 @@ on:
       - ".github/workflows/antora-gh-pages.yml"
   workflow_dispatch:
 
+# Grant required permissions
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
